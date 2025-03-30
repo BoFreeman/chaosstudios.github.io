@@ -96,63 +96,55 @@
       20% { clip: rect(10px, 9999px, 30px, 0); transform: translate(1px, -2px); }
       100% { clip: rect(0, 9999px, 0, 0); transform: translate(0, 0); }
     }
-#truthtv-intro {
-  position: fixed;
-  inset: 0;
-  background: black;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fadeOut 4s forwards;
-  animation-delay: 2.5s;
-}
 
-.crt-overlay {
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(255,255,255,0.03) 0px,
-    rgba(255,255,255,0.03) 2px,
-    transparent 2px,
-    transparent 4px
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    #truthtv-intro {
+      position: fixed;
+      inset: 0;
+      background: black;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeOut 4s forwards;
+      animation-delay: 2.5s;
+    }
 
-.truthtv-glitch-text {
-  color: #00ffcc;
-  font-size: 2rem;
-  font-family: 'Courier New', monospace;
-  text-shadow: 0 0 5px #00ffcc;
-  animation: glitch 0.8s infinite;
-}
+    .crt-overlay {
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.03) 0px,
+        rgba(255,255,255,0.03) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-@keyframes glitch {
-  0% { transform: translate(0); }
-  25% { transform: translate(-2px, 2px); }
-  50% { transform: translate(2px, -1px); }
-  75% { transform: translate(-1px, -2px); }
-  100% { transform: translate(1px, 1px); }
-}
+    .truthtv-glitch-text {
+      color: #00ffcc;
+      font-size: 2rem;
+      font-family: 'Courier New', monospace;
+      text-shadow: 0 0 5px #00ffcc;
+      animation: glitch 0.8s infinite;
+    }
 
-@keyframes fadeOut {
-  to { opacity: 0; visibility: hidden; }
-}
-<head>
-  <!-- SECTION 1: HEAD META + STYLES -->
-  <meta charset="UTF-8" />
-  ...
-  <style>
-    /* 🎨 Your existing styles live here */
-    
-    /* ✨ Paste the new CRT + glitch styles HERE, anywhere inside this block */
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      25% { transform: translate(-2px, 2px); }
+      50% { transform: translate(2px, -1px); }
+      75% { transform: translate(-1px, -2px); }
+      100% { transform: translate(1px, 1px); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
   </style>
 </head>
-
 <body>
   <!-- SECTION 0.1: TRUTHTV GLITCH INTRO -->
   <div id="truthtv-intro">
@@ -160,6 +152,9 @@
       <div class="truthtv-glitch-text">TRUTHTV // INITIATING FEED</div>
     </div>
   </div>
+
+  <!-- SECTION 2.1: GLITCH TITLE -->
+  <div class="glitch-title" data-text="ME CHAOS SUPREME">ME CHAOS SUPREME</div>
 
   <!-- SECTION 2: POSTER CONTAINER -->
   <div class="poster-container">
@@ -176,6 +171,7 @@
   <!-- Coming soon: Harmony Sculpture, Novel Preview, TruthTV -->
 </body>
 </html>
+
 
 </body>
 </html>
