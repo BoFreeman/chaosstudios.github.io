@@ -2,96 +2,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- SECTION: Meta & Title -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chaos Studios – ME CHAOS SUPREME</title>
-
-  <!-- SECTION: Styling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chaos Studios – Antisystem Satiricum</title>
   <style>
     body {
       margin: 0;
+      font-family: 'Georgia', serif;
       background-color: #111;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .poster-container {
-      max-width: 100%;
+      color: #f0e6d2;
       text-align: center;
-      padding: 40px 20px;
     }
-
-    .poster-container img {
-      width: 100%;
-      max-width: 1000px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    header {
+      padding: 4rem 2rem 2rem;
     }
-
-    .fallback-warning {
-      color: red;
-      margin-top: 20px;
-      font-family: 'Courier New', monospace;
-    }
-
-    .cta-buttons {
-      margin-top: 30px;
-    }
-
-    .cta-buttons a {
-      margin: 0 10px;
-      padding: 12px 24px;
-      background-color: #ff3c00;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: 0.2s ease;
-    }
-
-    .cta-buttons a:hover {
-      background-color: #ff6a3d;
-    }
-
-    .glitch-title {
+    h1 {
       font-size: 3rem;
-      font-weight: bold;
-      color: white;
-      position: relative;
-      text-align: center;
-      margin-top: 50px;
-      font-family: 'Courier New', monospace;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+    p.subtitle {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #ccc;
+    }
+    .cta-button {
+      margin: 2rem auto;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      background-color: #d62828;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
       text-transform: uppercase;
-      letter-spacing: 2px;
+    }
+    .cta-button:hover {
+      background-color: #a11b1b;
+    }
+    .poster-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .poster-gallery img {
+      max-width: 300px;
+      border: 2px solid #444;
+      transition: transform 0.2s;
+    }
+    .poster-gallery img:hover {
+      transform: scale(1.05);
+      border-color: #d62828;
+    }
+    footer {
+      margin: 3rem 0 1rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
-
 <body>
+  <header>
+    <h1>Chaos Studios</h1>
+    <h2>Antisystem Satiricum</h2>
+    <p class="subtitle">Thinking is not dead. Laugh neither.</p>
+    <button class="cta-button" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">View the Posters</button>
+  </header>
 
-  <!-- SECTION: Glitch Title -->
-  <div class="glitch-title" data-text="ME CHAOS SUPREME">ME CHAOS SUPREME</div>
+  <section id="gallery" class="poster-gallery">
+    <img src="assets/posters/nobody-kills-like-me.png" alt="Nobody Kills Like Me Poster" />
+    <img src="assets/posters/tariffs-are-beautiful.png" alt="Tariffs Are Beautiful Poster" />
+    <!-- Add more posters here -->
+  </section>
 
-  <!-- SECTION: Poster Image -->
-  <div class="poster-container">
-    <img id="poster"
-         src="Images/mafaverse_ensemble_poster.png"
-         alt="ME CHAOS SUPREME Ensemble Poster"
-         onerror="this.onerror=null; this.src='poster-ensemble-final.jpg'; document.getElementById('fallback-msg').style.display='block';" />
-    <div id="fallback-msg" class="fallback-warning" style="display: none;">
-      ⚠️ Poster fallback activated. Check if mafaverse_ensemble_poster.png is in the Images folder.
-    </div>
-  </div>
-
-  <!-- SECTION: CTA Buttons -->
-  <div class="cta-buttons">
-    <a href="#revolution">Join the Revolution</a>
-    <a href="#truth">They Don’t Want You To Know This</a>
-  </div>
-
+  <footer>
+    &copy; 2025 Chaos Studios. All rights defied.
+  </footer>
 </body>
 </html>
