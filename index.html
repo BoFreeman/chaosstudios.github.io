@@ -5,78 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chaos Studios – ME CHAOS SUPREME</title>
- glitch-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-  position: relative;
-  text-align: center;
-  margin-top: 50px;
-  font-family: 'Courier New', monospace;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.glitch-title::before,
-.glitch-title::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  color: white;
-  clip: rect(0, 900px, 0, 0);
-}
-
-.glitch-title::before {
-  animation: glitchTop 2s infinite linear alternate-reverse;
-  color: #ff00c8;
-  z-index: -1;
-}
-
-.glitch-title::after {
-  animation: glitchBottom 2s infinite linear alternate-reverse;
-  color: #00fff9;
-  z-index: -2;
-}
-
-@keyframes glitchTop {
-  0% {
-    clip: rect(0, 9999px, 0, 0);
-    transform: translate(-2px, -2px);
-  }
-  10% {
-    clip: rect(10px, 9999px, 40px, 0);
-    transform: translate(2px, 2px);
-  }
-  20% {
-    clip: rect(30px, 9999px, 60px, 0);
-    transform: translate(-2px, 1px);
-  }
-  100% {
-    clip: rect(0, 9999px, 0, 0);
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes glitchBottom {
-  0% {
-    clip: rect(0, 9999px, 0, 0);
-    transform: translate(2px, 2px);
-  }
-  10% {
-    clip: rect(50px, 9999px, 80px, 0);
-    transform: translate(-1px, -1px);
-  }
-  20% {
-    clip: rect(10px, 9999px, 30px, 0);
-    transform: translate(1px, -2px);
-  }
-  100% {
-    clip: rect(0, 9999px, 0, 0);
-    transform: translate(0, 0);
-  }
-}
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     .poster-container {
       max-width: 100%;
@@ -110,15 +47,66 @@
     .cta-buttons a:hover {
       background-color: #ff6a3d;
     }
+
+    .glitch-title {
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+      position: relative;
+      text-align: center;
+      margin-top: 50px;
+      font-family: 'Courier New', monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .glitch-title::before,
+    .glitch-title::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      color: white;
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    .glitch-title::before {
+      animation: glitchTop 2s infinite linear alternate-reverse;
+      color: #ff00c8;
+      z-index: -1;
+    }
+
+    .glitch-title::after {
+      animation: glitchBottom 2s infinite linear alternate-reverse;
+      color: #00fff9;
+      z-index: -2;
+    }
+
+    @keyframes glitchTop {
+      0% { clip: rect(0, 9999px, 0, 0); transform: translate(-2px, -2px); }
+      10% { clip: rect(10px, 9999px, 40px, 0); transform: translate(2px, 2px); }
+      20% { clip: rect(30px, 9999px, 60px, 0); transform: translate(-2px, 1px); }
+      100% { clip: rect(0, 9999px, 0, 0); transform: translate(0, 0); }
+    }
+
+    @keyframes glitchBottom {
+      0% { clip: rect(0, 9999px, 0, 0); transform: translate(2px, 2px); }
+      10% { clip: rect(50px, 9999px, 80px, 0); transform: translate(-1px, -1px); }
+      20% { clip: rect(10px, 9999px, 30px, 0); transform: translate(1px, -2px); }
+      100% { clip: rect(0, 9999px, 0, 0); transform: translate(0, 0); }
+    }
   </style>
 </head>
 
 <body>
+  <!-- SECTION 2.1: GLITCH TITLE -->
+  <div class="glitch-title" data-text="ME CHAOS SUPREME">ME CHAOS SUPREME</div>
 
-<!-- SECTION 2: POSTER CONTAINER -->
-<div class="poster-container">
-  <img src="images/mafaverse_ensemble_poster.png" alt="ME CHAOS SUPREME Ensemble Poster">
-</div>
+  <!-- SECTION 2: POSTER CONTAINER -->
+  <div class="poster-container">
+    <img src="images/mafaverse_ensemble_poster.png" alt="ME CHAOS SUPREME Ensemble Poster">
+  </div>
 
   <!-- SECTION 3: CTA BUTTONS -->
   <div class="cta-buttons">
@@ -128,6 +116,8 @@
 
   <!-- SECTION 4: FUTURE CONTENT -->
   <!-- Coming soon: Harmony Sculpture, Novel Preview, TruthTV -->
+</body>
+</html>
 
 </body>
 </html>
